@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.fxml.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pcbuilder.BuildGuideController"
+      spacing="10" alignment="TOP_LEFT"
+      style="-fx-padding: 16;">
+
+    <Label text="Οδηγός Συναρμολόγησης"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label fx:id="profileLabel"
+           text="Οδηγός για προφίλ: –"
+           style="-fx-font-size: 14px;" />
+
+    <Label text="Τρέχουσα σύνθεση Η/Υ:"
+           style="-fx-font-weight: bold;" />
+    <TextArea fx:id="buildSummaryArea"
+              prefRowCount="7"
+              wrapText="true"
+              editable="false" />
+
+    <Label text="Οδηγίες συναρμολόγησης:"
+           style="-fx-font-weight: bold;" />
+    <TextArea fx:id="tipsArea"
+              prefRowCount="12"
+              wrapText="true"
+              editable="false" />
+</VBox>

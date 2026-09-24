@@ -1,0 +1,6 @@
+id,brand,model,supported_form_factors,max_gpu_length_mm,max_air_cooler_height_mm,supports_240_aio,supports_280_aio,supports_360_aio,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+lian_li_a3,Lian Li,A3-mATX,mATX;ITX,415,165,true,true,true,85.0,,Lian Li A3 mATX,
+corsair_4000d,Corsair,4000D Airflow,ATX;mATX;ITX,360,170,true,true,true,105.0,,Corsair 4000D Airflow,
+nzxt_h5_flow,NZXT,H5 Flow,ATX;mATX;ITX,365,165,true,true,false,95.0,,NZXT H5 Flow,
+coolermaster_q300l,Cooler Master,MasterBox Q300L,mATX;ITX,360,159,true,false,false,55.0,,Cooler Master MasterBox Q300L,
+fractal_north,Fractal Design,North,ATX;mATX;ITX,355,170,true,true,true,145.0,,Fractal Design North,

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.fxml.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pcbuilder.SkroutzDiscoveryController"
+      spacing="12" alignment="TOP_CENTER" style="-fx-padding: 14;">
+
+    <Label text="Περιήγηση στο Skroutz μέσα από την εφαρμογή"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Αναζήτηση ή URL:" />
+        <TextField fx:id="addressField" prefWidth="640"
+                   promptText="Πληκτρολόγησε αναζήτηση, π.χ. RTX 5090 ή Ryzen 9800X3D"
+                   onAction="#onGo" />
+        <Button fx:id="goButton" text="Μετάβαση" onAction="#onGo" />
+        <Button fx:id="backButton" text="◀" onAction="#onBack" />
+        <Button fx:id="forwardButton" text="▶" onAction="#onForward" />
+        <Button fx:id="refreshButton" text="Ανανέωση" onAction="#onRefresh" />
+        <Button fx:id="importButton" text="Εισαγωγή Προϊόντος" onAction="#onImportCurrent" />
+    </HBox>
+
+    <WebView fx:id="browserView" prefWidth="1100" prefHeight="620" />
+
+    <Label fx:id="statusLabel" wrapText="true" maxWidth="1080"
+           style="-fx-text-fill: #0b5394; -fx-font-size: 13px;" />
+</VBox>

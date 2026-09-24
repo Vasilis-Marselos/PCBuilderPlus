@@ -1,0 +1,10 @@
+id,brand,model,type,capacity_gb,perf_score,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+sata_1tb_mx500,Crucial,MX500 1TB,SATA SSD,1000,7.0,85.0,,Crucial MX500 1TB SATA SSD,
+hdd_2tb_barracuda,Seagate,Barracuda 2TB,HDD,2000,4.0,55.0,,Seagate Barracuda 2TB HDD,
+nvme_1tb_sn770,WD,Black SN770 1TB,NVMe,1000,8.0,100.0,,WD Black SN770 1TB NVMe SSD,
+nvme_1tb_990pro,Samsung,990 Pro 1TB,NVMe,1000,9.0,222.02,MZ-V9P1T0BW,Samsung 990 Pro 1TB NVMe SSD,
+nvme_2tb_990pro,Samsung,990 Pro 2TB,NVMe,2000,9.2,334.89,MZ-V9P2T0BW,Samsung 990 Pro 2TB NVMe SSD,https://www.skroutz.gr/s/39358691/Samsung-990-PRO-SSD-2TB-typou-M-2-me-syndesi-PCI-Express-4-0-PS5-Compatible-MZ-V9P2T0BW.html
+nvme_1tb_980pro,Samsung,980 Pro 1TB,NVMe,1000,8.8,699.45,MZ-V8P1T0BW,Samsung 980 Pro 1TB NVMe SSD,https://www.skroutz.gr/s/25837599/Samsung-980-Pro-SSD-1TB-M-2-NVMe-PCI-Express-4-0-MZ-V8P1T0BW.html
+nvme_2tb_980pro,Samsung,980 Pro 2TB,NVMe,2000,8.9,616.72,MZ-V8P2T0BW,Samsung 980 Pro 2TB NVMe SSD,https://www.skroutz.gr/s/26907924/Samsung-980-Pro-SSD-2TB-typou-M-2-me-syndesi-PCI-Express-4-0-PS5-Compatible-MZ-V8P2T0BW.html
+nvme_1tb_kc3000,Kingston,KC3000 1TB,NVMe,1000,9.0,176.34,SKC3000S/1024G,Kingston KC3000 1TB NVMe SSD,https://www.skroutz.gr/s/31954277/Kingston-KC3000-SSD-1TB-typou-M-2-me-syndesi-PCI-Express-4-0-PS5-Compatible-SKC3000S-1024G.html
+nvme_2tb_kc3000,Kingston,KC3000 2TB,NVMe,2000,9.2,257.34,SKC3000D/2048G,Kingston KC3000 2TB NVMe SSD,

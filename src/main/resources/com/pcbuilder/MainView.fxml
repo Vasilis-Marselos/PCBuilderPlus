@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.fxml.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.pcbuilder.MainController"
+            style="-fx-background-color: #edf1f6; -fx-font-family: 'Segoe UI';">
+
+    <fx:define>
+        <ToggleGroup fx:id="profileGroup" />
+        <ToggleGroup fx:id="psuSafetyGroup" />
+    </fx:define>
+
+    
+    <top>
+        <VBox spacing="0" style="-fx-background-color: #121a2b;">
+            <HBox alignment="CENTER_LEFT" spacing="16" style="-fx-padding: 18 24 16 24;">
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="PCBuilder+"
+                           style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-weight: bold;" />
+                    <Label text="Διαδραστική σύνθεση Η/Υ, έλεγχος συμβατότητας, live τιμές και εκπαιδευτική βελτιστοποίηση"
+                           style="-fx-text-fill: #b8c4d6; -fx-font-size: 13px;" />
+                </VBox>
+
+                <Button text="Αποθήκευση" onAction="#onSaveBuild"
+                        style="-fx-background-color: #f8fafc; -fx-text-fill: #111827; -fx-background-radius: 10; -fx-padding: 7 14 7 14;" />
+                <Button text="Φόρτωση" onAction="#onLoadBuild"
+                        style="-fx-background-color: #f8fafc; -fx-text-fill: #111827; -fx-background-radius: 10; -fx-padding: 7 14 7 14;" />
+                <Button text="Εξαγωγή Αναφοράς" onAction="#onExportBuildReport"
+                        style="-fx-background-color: #f8fafc; -fx-text-fill: #111827; -fx-background-radius: 10; -fx-padding: 7 14 7 14;" />
+                <Button text="Αντιγραφή Σύνοψης" onAction="#onCopyBuildSummary"
+                        style="-fx-background-color: #f8fafc; -fx-text-fill: #111827; -fx-background-radius: 10; -fx-padding: 7 14 7 14;" />
+                <Button text="Επαναφορά" onAction="#onResetBuild"
+                        style="-fx-background-color: #ffe2e2; -fx-text-fill: #7f1d1d; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 7 14 7 14;" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED"
+                    style="-fx-background: transparent; -fx-background-color: transparent;">
+            <VBox spacing="18" alignment="TOP_CENTER" style="-fx-padding: 20 24 24 24;">
+
+                
+                <VBox spacing="12" maxWidth="1500"
+                      style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-color: #d8dee9; -fx-border-radius: 18; -fx-padding: 16; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.12), 16, 0, 0, 4);">
+
+                    <HBox spacing="18" alignment="CENTER_LEFT">
+                        <Label text="Έλεγχοι Σύνθεσης"
+                               style="-fx-text-fill: #111827; -fx-font-size: 17px; -fx-font-weight: bold;" />
+
+                        <Region HBox.hgrow="ALWAYS" />
+
+                        <Label text="Προφίλ:" style="-fx-text-fill: #111827; -fx-font-weight: bold;" />
+                        <RadioButton text="Gaming" fx:id="gamingRadio" toggleGroup="${profileGroup}" onAction="#onProfileChanged"
+                                     style="-fx-text-fill: #111827;" />
+                        <RadioButton text="Creator" fx:id="creatorRadio" toggleGroup="${profileGroup}" onAction="#onProfileChanged"
+                                     style="-fx-text-fill: #111827;" />
+
+                        <Separator orientation="VERTICAL" prefHeight="24" />
+
+                        <Label text="Λειτουργία PSU:" style="-fx-text-fill: #111827; -fx-font-weight: bold;" />
+                        <RadioButton text="Ασφαλές" fx:id="safePsuRadio" toggleGroup="${psuSafetyGroup}" onAction="#onPsuSafetyChanged"
+                                     style="-fx-text-fill: #111827;" />
+                        <RadioButton text="Οριακό" fx:id="aggressivePsuRadio" toggleGroup="${psuSafetyGroup}" onAction="#onPsuSafetyChanged"
+                                     style="-fx-text-fill: #111827;" />
+                    </HBox>
+
+                    <FlowPane hgap="10" vgap="8" alignment="CENTER_LEFT">
+                        <Label text="Budget (€):" style="-fx-text-fill: #111827; -fx-font-weight: bold;" />
+                        <TextField fx:id="budgetField" promptText="κενό = χωρίς όριο" prefWidth="150" />
+                        <Button text="?" onAction="#onExplainBudget"
+                                style="-fx-font-size: 10; -fx-padding: 1 7 1 7; -fx-background-radius: 999;" />
+
+                        <Label text="Προτάσεις:" style="-fx-text-fill: #111827; -fx-font-weight: bold; -fx-padding: 0 0 0 12;" />
+                        <Button text="Μέγιστη Απόδοση" onAction="#onSuggestMaxPerformance" />
+                        <Button text="Χαμηλότερη Τιμή" onAction="#onSuggestLowestPrice" />
+                        <Button text="Καλύτερο Value" onAction="#onSuggestBestValue" />
+                        <Button text="Έτοιμες Συνθέσεις" onAction="#onLoadPresetBuild" />
+                    </FlowPane>
+
+                    <FlowPane hgap="10" vgap="8" alignment="CENTER_LEFT">
+                        <Label text="Επιλογή:" style="-fx-text-fill: #111827; -fx-font-weight: bold;" />
+                        <Button text="CPU" onAction="#onPickCpu" />
+                        <Button text="Ψύξη CPU" onAction="#onPickCooler" />
+                        <Button text="GPU" onAction="#onPickGpu" />
+                        <Button text="Μητρική" onAction="#onPickMobo" />
+                        <Button text="RAM" onAction="#onPickRam" />
+                        <Button text="Αποθ. Χώρος" onAction="#onPickStorage" />
+                        <Button text="PSU" onAction="#onPickPsu" />
+                        <Button text="Κουτί" onAction="#onPickCase" />
+
+                        <Label text="Εργαλεία:" style="-fx-text-fill: #111827; -fx-font-weight: bold; -fx-padding: 0 0 0 12;" />
+                        <Button fx:id="refreshLivePricesButton" text="Ανανέωση Τιμών Skroutz" onAction="#onRefreshLivePrices" />
+                        <Button text="Εισαγωγή Skroutz" onAction="#onOpenSkroutzDiscovery" />
+                        <Button text="Οδηγός Build" onAction="#onOpenBuildGuide" />
+                        <Button text="Βελτιστοποίηση" onAction="#onOpenOptimizationPanel" />
+                        <Button text="Οδηγοί" onAction="#onOpenTutorialLibrary" />
+                    </FlowPane>
+                </VBox>
+
+                
+                <HBox spacing="20" alignment="TOP_CENTER" maxWidth="1500">
+
+                    
+                    <VBox spacing="12" prefWidth="575" minWidth="540"
+                          style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-color: #d8dee9; -fx-border-radius: 18; -fx-padding: 18; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.12), 16, 0, 0, 4);">
+                        <HBox alignment="CENTER_LEFT" spacing="8">
+                            <Label text="Διαδραστικό Σχεδιάγραμμα Η/Υ"
+                                   style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #111827;" />
+                            <Label text="κλικ σε περιοχή για επιλογή εξαρτήματος"
+                                   style="-fx-font-size: 12px; -fx-text-fill: #64748b;" />
+                        </HBox>
+
+                        <AnchorPane prefWidth="535" prefHeight="610"
+                                    style="-fx-background-color: linear-gradient(to bottom, #20283a, #111827); -fx-background-radius: 24; -fx-border-color: #5b677a; -fx-border-radius: 24; -fx-border-width: 2;">
+
+                            
+                            <Pane layoutX="24" layoutY="22" prefWidth="487" prefHeight="556"
+                                  style="-fx-background-color: rgba(255,255,255,0.035); -fx-background-radius: 20; -fx-border-color: #3b4657; -fx-border-width: 1.5; -fx-border-radius: 20;" />
+                            <Label text="ΚΟΥΤΙ / CHASSIS" layoutX="44" layoutY="38"
+                                   style="-fx-text-fill: #dbe7ff; -fx-font-weight: bold; -fx-font-size: 12px;" />
+                            <Button fx:id="pcCaseButton" text="Κουτί" onAction="#onPickCase" layoutX="44" layoutY="62" prefWidth="447" prefHeight="38"
+                                    style="-fx-background-color: #dce8ff; -fx-text-fill: #111827; -fx-background-radius: 12; -fx-font-weight: bold;" />
+
+                            
+                            <Pane layoutX="78" layoutY="132" prefWidth="310" prefHeight="298"
+                                  style="-fx-background-color: #2d3648; -fx-background-radius: 16; -fx-border-color: #7a8aa4; -fx-border-width: 2; -fx-border-radius: 16;" />
+                            <Label text="ΜΗΤΡΙΚΗ" layoutX="188" layoutY="145"
+                                   style="-fx-text-fill: #e5efff; -fx-font-weight: bold; -fx-font-size: 12px;" />
+                            <Button fx:id="moboCaseButton" text="Μητρική" onAction="#onPickMobo" layoutX="126" layoutY="392" prefWidth="214" prefHeight="30"
+                                    style="-fx-background-radius: 10; -fx-text-fill: #111827;" />
+
+                            
+                            <Pane layoutX="118" layoutY="176" prefWidth="104" prefHeight="76"
+                                  style="-fx-background-color: rgba(141, 211, 255, 0.14); -fx-background-radius: 12; -fx-border-color: #8dd3ff; -fx-border-radius: 12;" />
+                            <Button fx:id="cpuCaseButton" text="CPU" onAction="#onPickCpu" layoutX="130" layoutY="188" prefWidth="80" prefHeight="28"
+                                    style="-fx-background-color: #eef6ff; -fx-text-fill: #111827; -fx-background-radius: 9; -fx-font-weight: bold;" />
+                            <Button fx:id="coolerCaseButton" text="Ψύξη" onAction="#onPickCooler" layoutX="130" layoutY="220" prefWidth="80" prefHeight="24"
+                                    style="-fx-background-color: #fff0cf; -fx-text-fill: #111827; -fx-background-radius: 9;" />
+
+                            
+                            <Pane layoutX="258" layoutY="170" prefWidth="82" prefHeight="120"
+                                  style="-fx-background-color: rgba(191, 255, 195, 0.12); -fx-background-radius: 12; -fx-border-color: #9be89f; -fx-border-radius: 12;" />
+                            <Label text="DIMM" layoutX="285" layoutY="178" style="-fx-text-fill: #d6ffe0; -fx-font-size: 10px; -fx-font-weight: bold;" />
+                            <Button fx:id="ramCaseButton" text="RAM" onAction="#onPickRam" layoutX="268" layoutY="200" prefWidth="62" prefHeight="70"
+                                    style="-fx-background-color: #e2ffe6; -fx-text-fill: #111827; -fx-background-radius: 10; -fx-font-weight: bold;" />
+
+                            
+                            <Pane layoutX="108" layoutY="316" prefWidth="238" prefHeight="54"
+                                  style="-fx-background-color: rgba(255, 170, 170, 0.11); -fx-background-radius: 12; -fx-border-color: #ff9b9b; -fx-border-radius: 12;" />
+                            <Label text="PCIe x16" layoutX="120" layoutY="323" style="-fx-text-fill: #ffd7d7; -fx-font-size: 10px; -fx-font-weight: bold;" />
+                            <Button fx:id="gpuCaseButton" text="GPU" onAction="#onPickGpu" layoutX="120" layoutY="342" prefWidth="98" prefHeight="24"
+                                    style="-fx-background-color: #ffe1e1; -fx-text-fill: #111827; -fx-background-radius: 9; -fx-font-weight: bold;" />
+
+                            
+                            <Pane layoutX="236" layoutY="337" prefWidth="96" prefHeight="32"
+                                  style="-fx-background-color: rgba(255, 231, 145, 0.16); -fx-background-radius: 10; -fx-border-color: #ffe791; -fx-border-radius: 10;" />
+                            <Button fx:id="storageCaseButton" text="M.2" onAction="#onPickStorage" layoutX="246" layoutY="341" prefWidth="74" prefHeight="22"
+                                    style="-fx-background-color: #fff6c7; -fx-text-fill: #111827; -fx-background-radius: 8; -fx-font-weight: bold;" />
+
+                            
+                            <Pane layoutX="102" layoutY="474" prefWidth="270" prefHeight="78"
+                                  style="-fx-background-color: #242a36; -fx-background-radius: 16; -fx-border-color: #687387; -fx-border-width: 2; -fx-border-radius: 16;" />
+                            <Label text="ΘΕΣΗ PSU" layoutX="210" layoutY="486" style="-fx-text-fill: #dbe7ff; -fx-font-weight: bold; -fx-font-size: 12px;" />
+                            <Button fx:id="psuCaseButton" text="PSU" onAction="#onPickPsu" layoutX="156" layoutY="512" prefWidth="162" prefHeight="28"
+                                    style="-fx-background-color: #f3f4f6; -fx-text-fill: #111827; -fx-background-radius: 10; -fx-font-weight: bold;" />
+                        </AnchorPane>
+                    </VBox>
+
+                    
+                    <VBox spacing="12" prefWidth="860" minWidth="690"
+                          style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-color: #d8dee9; -fx-border-radius: 18; -fx-padding: 18; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.12), 16, 0, 0, 4);">
+                        <Label text="Σύνοψη Επιλεγμένης Σύνθεσης"
+                               style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #111827;" />
+
+                        <VBox spacing="7" style="-fx-padding: 8 0 8 0;">
+                            <Label fx:id="cpuLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="coolerLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="gpuLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="moboLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="caseLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="ramLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="storageLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                            <Label fx:id="psuLabel" wrapText="true" style="-fx-text-fill: #111827; -fx-font-size: 14px;" />
+                        </VBox>
+
+                        <HBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 12; -fx-background-color: #f6f8fb; -fx-background-radius: 14;">
+                            <VBox spacing="3" prefWidth="230">
+                                <HBox spacing="5" alignment="CENTER_LEFT">
+                                    <Label text="Απόδοση" style="-fx-text-fill: #475467; -fx-font-size: 12px; -fx-font-weight: bold;" />
+                                    <Button text="?" onAction="#onExplainPerformance" style="-fx-font-size: 10; -fx-padding: 0 6 0 6; -fx-background-radius: 999;" />
+                                </HBox>
+                                <Label fx:id="performanceLabel" style="-fx-text-fill: #111827; -fx-font-size: 16px; -fx-font-weight: bold;" />
+                            </VBox>
+
+                            <VBox spacing="3" prefWidth="230">
+                                <HBox spacing="5" alignment="CENTER_LEFT">
+                                    <Label text="Αξία" style="-fx-text-fill: #475467; -fx-font-size: 12px; -fx-font-weight: bold;" />
+                                    <Button text="?" onAction="#onExplainValue" style="-fx-font-size: 10; -fx-padding: 0 6 0 6; -fx-background-radius: 999;" />
+                                </HBox>
+                                <Label fx:id="valueLabel" style="-fx-text-fill: #111827; -fx-font-size: 16px; -fx-font-weight: bold;" />
+                            </VBox>
+
+                            <VBox spacing="3" prefWidth="230">
+                                <HBox spacing="5" alignment="CENTER_LEFT">
+                                    <Label text="Ισχύς" style="-fx-text-fill: #475467; -fx-font-size: 12px; -fx-font-weight: bold;" />
+                                    <Button text="?" onAction="#onExplainPower" style="-fx-font-size: 10; -fx-padding: 0 6 0 6; -fx-background-radius: 999;" />
+                                </HBox>
+                                <Label fx:id="powerLabel" style="-fx-text-fill: #111827; -fx-font-size: 16px; -fx-font-weight: bold;" />
+                            </VBox>
+                        </HBox>
+
+                        <Label fx:id="totalPriceLabel"
+                               style="-fx-text-fill: #111827; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 4 0 4 0;" />
+
+                        <VBox spacing="10" style="-fx-padding: 12; -fx-background-color: #f8fafc; -fx-background-radius: 14; -fx-border-color: #d8dee9; -fx-border-radius: 14;">
+                            <Label text="Συμβατότητα / Κατάσταση" style="-fx-text-fill: #111827; -fx-font-size: 14px; -fx-font-weight: bold;" />
+
+                            
+                            <Label fx:id="compatibilityLabel" visible="false" managed="false" />
+
+                            <GridPane hgap="8" vgap="8">
+                                <columnConstraints>
+                                    <ColumnConstraints percentWidth="50" />
+                                    <ColumnConstraints percentWidth="50" />
+                                </columnConstraints>
+
+                                <VBox fx:id="socketCard" spacing="4" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                                      style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10;">
+                                    <Label fx:id="socketStatusLabel" text="Αναμονή • Socket" wrapText="true" style="-fx-text-fill: #334155; -fx-font-weight: bold; -fx-font-size: 13px;" />
+                                    <Label fx:id="socketDetailLabel" text="Επίλεξε CPU και μητρική." wrapText="true" style="-fx-text-fill: #334155; -fx-font-size: 12px;" />
+                                </VBox>
+
+                                <VBox fx:id="ramCard" spacing="4" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                                      style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10;">
+                                    <Label fx:id="ramStatusLabel" text="Αναμονή • Τύπος RAM" wrapText="true" style="-fx-text-fill: #334155; -fx-font-weight: bold; -fx-font-size: 13px;" />
+                                    <Label fx:id="ramDetailLabel" text="Επίλεξε RAM και μητρική." wrapText="true" style="-fx-text-fill: #334155; -fx-font-size: 12px;" />
+                                </VBox>
+
+                                <VBox fx:id="caseFitCard" spacing="4" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                                      style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10;">
+                                    <Label fx:id="caseFitStatusLabel" text="Αναμονή • Κουτί" wrapText="true" style="-fx-text-fill: #334155; -fx-font-weight: bold; -fx-font-size: 13px;" />
+                                    <Label fx:id="caseFitDetailLabel" text="Επίλεξε κουτί και μητρική." wrapText="true" style="-fx-text-fill: #334155; -fx-font-size: 12px;" />
+                                </VBox>
+
+                                <VBox fx:id="gpuClearanceCard" spacing="4" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                                      style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10;">
+                                    <Label fx:id="gpuClearanceStatusLabel" text="Αναμονή • Χώρος GPU" wrapText="true" style="-fx-text-fill: #334155; -fx-font-weight: bold; -fx-font-size: 13px;" />
+                                    <Label fx:id="gpuClearanceDetailLabel" text="Επίλεξε GPU και κουτί." wrapText="true" style="-fx-text-fill: #334155; -fx-font-size: 12px;" />
+                                </VBox>
+
+                                <VBox fx:id="coolerFitCard" spacing="4" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                                      style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10;">
+                                    <Label fx:id="coolerFitStatusLabel" text="Αναμονή • Ψύξη CPU" wrapText="true" style="-fx-text-fill: #334155; -fx-font-weight: bold; -fx-font-size: 13px;" />
+                                    <Label fx:id="coolerFitDetailLabel" text="Επίλεξε ψύξη CPU και κουτί." wrapText="true" style="-fx-text-fill: #334155; -fx-font-size: 12px;" />
+                                </VBox>
+
+                                <VBox fx:id="psuHeadroomCard" spacing="4" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                                      style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10;">
+                                    <Label fx:id="psuHeadroomStatusLabel" text="Αναμονή • Περιθώριο PSU" wrapText="true" style="-fx-text-fill: #334155; -fx-font-weight: bold; -fx-font-size: 13px;" />
+                                    <Label fx:id="psuHeadroomDetailLabel" text="Επίλεξε PSU και βασικά εξαρτήματα." wrapText="true" style="-fx-text-fill: #334155; -fx-font-size: 12px;" />
+                                </VBox>
+                            </GridPane>
+
+                            <Label fx:id="suggestionLabel" wrapText="true" style="-fx-text-fill: #15803d; -fx-font-size: 13px;" />
+                            <Label fx:id="livePriceStatusLabel" wrapText="true" style="-fx-text-fill: #0b5394; -fx-font-size: 13px;" />
+                        </VBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

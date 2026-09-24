@@ -1,0 +1,11 @@
+id,brand,model,capacity_gb,sticks,speed_mhz,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+ddr4_32_2x16_3200_aegis,G.Skill,Aegis 32GB (2x16) 3200,32,2,3200,75.0,F4-3200C16D-32GIS,G.Skill Aegis DDR4 32GB 2x16GB 3200,
+ddr4_32_4x8_3200_aegis,G.Skill,Aegis 32GB (4x8) 3200,32,4,3200,85.0,F4-3200C16Q-32GIS,G.Skill Aegis DDR4 32GB 4x8GB 3200,https://www.skroutz.gr/s/20591449/G-Skill-Aegis-32GB-DDR4-RAM-me-4-Modules-4x8GB-kai-Tachytita-3200-gia-Desktop-F4-3200C16Q-32GIS.html,
+ddr4_32_2x16_3600_ripjaws,G.Skill,Ripjaws V 32GB (2x16) 3600,32,2,3600,90.0,,G.Skill Ripjaws V 32GB DDR4 3600,
+ddr5_16_2x8_6000,G.Skill,Trident Z5 16GB (2x8) 6000,16,2,6000,120.0,,G.Skill Trident Z5 16GB 2x8GB DDR5 6000,
+ddr5_32_2x16_5600_kingston,Kingston,Fury Beast 32GB (2x16) 5600,32,2,5600,140.0,KF556C36BWEK2-32,Kingston Fury Beast 32GB DDR5 5600,
+ddr5_32_2x16_6000_kingston_black,Kingston,Fury Beast 32GB (2x16) 6000 CL30,32,2,6000,150.81,KF560C30BBEK2-32,Kingston FURY Beast DDR5 32GB 6000 CL30,https://www.skroutz.gr/s/51867976/Kingston-FURY-Beast-DDR5-RAM-me-2x16GB-Modules-kai-Tachytita-6000-gia-Desktop-KF560C30BBEK2-32.html,
+ddr5_32_2x16_6000_kingston_white,Kingston,Fury Beast White 32GB (2x16) 6000 CL30,32,2,6000,140.5,KF560C30BWEK2-32,Kingston Fury Beast White DDR5 32GB 6000 CL30,https://www.skroutz.gr/s/55786470/Kingston-DDR5-RAM-me-Module-1x32GB-kai-Tachytita-6000-gia-Desktop-KF560C30BWEK2-32.html,
+ddr5_32_2x16_6000_flare_cl30,G.Skill,Flare X5 32GB (2x16) 6000 CL30,32,2,6000,466.79,F5-6000J3038F16GX2-FX5,G.Skill Flare X5 32GB DDR5 6000 CL30,https://www.skroutz.gr/s/41964667/G-Skill-Flare-X5-DDR5-32GB-RAM-me-2x16GB-Modules-kai-Tachytita-6000-gia-Desktop-F5-6000J3038F16GX2-FX5.html,
+ddr5_64_2x32_5600_corsair,Corsair,Vengeance 64GB (2x32) 5600,64,2,5600,230.0,,Corsair Vengeance 64GB 2x32GB DDR5 5600,
+ddr5_64_2x32_6000_kingston,Kingston,Fury Beast 64GB (2x32) 6000,64,2,6000,260.0,,Kingston Fury Beast 64GB DDR5 6000,

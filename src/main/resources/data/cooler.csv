@@ -1,0 +1,11 @@
+id,brand,model,type,height_mm,radiator_size_mm,tdp_rating_w,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+thermalright_pa120,Thermalright,Peerless Assassin 120 SE,AIR,155,0,220,36.54,,Thermalright Peerless Assassin 120 SE,https://www.skroutz.gr/s/51031768/Thermalright-Peerless-Assassin-120-SE-PSyktra-Epexergasti-Diplou-Anemistira-gia-Socket-AM4-AM5-1200-115x-1700.html
+thermalright_phantom_spirit,Thermalright,Phantom Spirit 120 SE,AIR,154,0,250,42.0,,Thermalright Phantom Spirit 120 SE,
+arctic_freezer_36,ARCTIC,Freezer 36,AIR,159,0,200,28.74,,ARCTIC Freezer 36,https://www.skroutz.gr/s/51123698/Arctic-Freezer-36-PSyktra-Epexergasti-gia-Socket-1700-1851-AM4-AM5.html
+noctua_nh_d15,Noctua,NH-D15,AIR,165,0,250,110.0,,Noctua NH-D15,
+bequiet_dark_rock_5,be quiet!,Dark Rock 5,AIR,161,0,240,75.0,,be quiet Dark Rock 5,
+deepcool_ak620,DeepCool,AK620,AIR,160,0,260,65.0,,DeepCool AK620,
+coolermaster_hyper_212,Cooler Master,Hyper 212 Black Edition,AIR,159,0,180,35.0,,Cooler Master Hyper 212 Black Edition,
+arctic_lf3_240,ARCTIC,Liquid Freezer III 240,AIO,0,240,280,65.0,,ARCTIC Liquid Freezer III 240,https://www.skroutz.gr/s/50820760/Arctic-Liquid-Freezer-III-240-Black-Ydropsyxi-AIO-CPU-me-2-Anemistires-120mm.html
+arctic_lf3_280,ARCTIC,Liquid Freezer III 280,AIO,0,280,300,67.39,,ARCTIC Liquid Freezer III 280,https://www.skroutz.gr/s/61755627/arctic-liquid-freezer-iii-pro-280-ydropsyxi-epexergasti-diplou-anemistira-120mm-gia-socket-am4-am5-1700.html
+arctic_lf3_360,ARCTIC,Liquid Freezer III 360,AIO,0,360,320,70.0,,ARCTIC Liquid Freezer III 360,https://www.skroutz.gr/s/59894538/arctic-liquid-freezer-iii-pro-360-ydropsyxi-aio-cpu-me-3-anemistires-120mm.html,

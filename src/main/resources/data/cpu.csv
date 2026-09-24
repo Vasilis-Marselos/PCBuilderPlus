@@ -1,0 +1,11 @@
+id,brand,model,socket,cores,base_clock_ghz,perf_score,tdp_w,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+ryzen5_7600,AMD,Ryzen 5 7600,AM5,6,3.8,75,65,175.0,,AMD Ryzen 5 7600 Socket AM5 6-Core,
+ryzen5_9600,AMD,Ryzen 5 9600,AM5,6,3.8,78,65,175.96,,AMD Ryzen 5 9600 Socket AM5 6-Core,https://www.skroutz.gr/s/59086232/AMD-Ryzen-5-9600-3-8GHz-Epexergastis-6-Pyrinon-gia-Socket-AM5-Tray.html
+ryzen5_9600x,AMD,Ryzen 5 9600X,AM5,6,3.9,82,65,173.4,,AMD Ryzen 5 9600X Socket AM5 6-Core,https://www.skroutz.gr/s/56282930/AMD-Ryzen-5-9600X-3-9GHz-Epexergastis-6-Pyrinon-gia-Socket-AM5-Tray.html
+ryzen7_7700,AMD,Ryzen 7 7700,AM5,8,3.8,84,65,230.0,,AMD Ryzen 7 7700 Socket AM5 8-Core,
+ryzen7_7800x3d,AMD,Ryzen 7 7800X3D,AM5,8,4.2,95,120,288.89,,AMD Ryzen 7 7800X3D Socket AM5 8-Core,
+ryzen7_9700x,AMD,Ryzen 7 9700X,AM5,8,3.8,90,65,260.0,,AMD Ryzen 7 9700X Socket AM5 8-Core,
+ryzen7_9800x3d,AMD,Ryzen 7 9800X3D,AM5,8,4.7,100,120,408.0,,AMD Ryzen 7 9800X3D Socket AM5 8-Core,https://www.skroutz.gr/s/58448602/AMD-Ryzen-7-9800X3D-4-7GHz-Epexergastis-8-Pyrinon-gia-Socket-AM5-Tray.html,
+i5_13600k,Intel,Core i5-13600K,LGA1700,14,3.5,85,125,240.0,,Intel Core i5-13600K LGA1700,
+i7_14700k,Intel,Core i7-14700K,LGA1700,20,3.4,90,125,401.93,,Intel Core i7-14700K LGA1700,
+ultra7_265f,Intel,Core Ultra 7 265F,LGA1851,20,2.4,92,182,325.13,,Intel Core Ultra 7 265F LGA1851,https://www.skroutz.gr/s/59086751/Intel-Ultra-7-265F-2-4GHz-Epexergastis-20-Pyrinon-gia-Socket-1851-Tray.html

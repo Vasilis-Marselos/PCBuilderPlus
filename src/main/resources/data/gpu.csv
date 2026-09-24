@@ -1,0 +1,10 @@
+id,brand,model,vram_gb,perf_score,tdp_w,length_mm,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+rtx_4060,NVIDIA,RTX 4060,8,42,115,245,300.0,,GeForce RTX 4060 8GB,
+rtx_4060_ti_16gb,NVIDIA,RTX 4060 Ti 16GB,16,52,165,270,430.0,,GeForce RTX 4060 Ti 16GB,
+rtx_4070_super,NVIDIA,RTX 4070 SUPER,12,67,220,305,650.0,,GeForce RTX 4070 SUPER 12GB,
+rtx_5070,NVIDIA,RTX 5070,12,72,250,292,629.9,NE75070019K9-GB2050S,Palit GeForce RTX 5070 12GB,https://www.skroutz.gr/s/59718277/palit-geforce-rtx-5070-12gb-gddr7-infinity-3-karta-grafikon-ne75070019k9-gb2050s.html
+rtx_5070_ti,NVIDIA,RTX 5070 Ti,16,82,300,331,1089.05,NE7507TS19T2-GB2031U,Palit GeForce RTX 5070 Ti 16GB,https://www.skroutz.gr/s/61786674/palit-geforce-rtx-5070-ti-16gb-gddr7-gamingpro-s-oc-karta-grafikon-ne7507ts19t2-gb2031u.html
+rtx_5080,NVIDIA,RTX 5080,16,90,360,304,1300.0,,GeForce RTX 5080 16GB,
+rtx_4090,NVIDIA,RTX 4090,24,95,450,340,1850.0,,GeForce RTX 4090 24GB,
+rx_7600,AMD,RX 7600,8,38,165,240,280.0,,Radeon RX 7600 8GB,
+rx_7900_xt,AMD,RX 7900 XT,20,78,315,330,780.0,,Radeon RX 7900 XT 20GB,

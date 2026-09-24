@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pcbuilder.OptimizationController"
+      spacing="10" style="-fx-padding: 16; -fx-font-family: 'Segoe UI';">
+
+    <Label text="Βελτιστοποίηση &amp; Ρυθμίσεις"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="profileLabel"
+           text="Προφίλ: (δεν έχει οριστεί)"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+    <Label text="Σύνοψη hardware:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="hardwareSummaryArea"
+              prefRowCount="5"
+              editable="false"
+              wrapText="true"/>
+
+    <Label text="Προτάσεις βελτιστοποίησης Windows:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="windowsTipsArea"
+              prefRowCount="10"
+              editable="false"
+              wrapText="true"/>
+
+    <Label text="Προτάσεις BIOS / UEFI:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="biosTipsArea"
+              prefRowCount="10"
+              editable="false"
+              wrapText="true"/>
+
+</VBox>

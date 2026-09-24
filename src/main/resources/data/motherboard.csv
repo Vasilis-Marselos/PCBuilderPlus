@@ -1,0 +1,10 @@
+id,brand,model,socket,form_factor,memory_type,price_eur,manufacturer_part_number,skroutz_query,skroutz_url
+b650_tomahawk,MSI,MAG B650 Tomahawk WiFi,AM5,ATX,DDR5,194.41,,MSI MAG B650 Tomahawk WiFi AM5,
+b650m_aorus_elite,Gigabyte,B650M Aorus Elite AX,AM5,mATX,DDR5,180.0,,Gigabyte B650M Aorus Elite AX AM5,
+asus_tuf_b650_plus,ASUS,TUF Gaming B650-Plus WiFi,AM5,ATX,DDR5,175.0,,ASUS TUF Gaming B650-Plus WiFi AM5,
+msi_pro_b850m_p_wifi,MSI,PRO B850M-P WiFi,AM5,mATX,DDR5,129.21,7E71-001R,MSI PRO B850M-P WiFi AM5,https://www.skroutz.gr/s/61630811/msi-pro-b850m-p-wifi-motherboard-micro-atx-me-amd-am5-socket.html.
+b850m_mortar_wifi,MSI,MAG B850M Mortar WiFi,AM5,mATX,DDR5,220.96,7E61-001R,MSI MAG B850M Mortar WiFi AM5,https://www.skroutz.gr/s/60367609/msi-mag-b850m-mortar-wifi-motherboard-micro-atx-me-amd-am5-socket.html,
+z790_tuf,ASUS,TUF Gaming Z790-Plus WiFi,LGA1700,ATX,DDR5,270.0,,ASUS TUF Gaming Z790-Plus WiFi LGA1700,
+b760m_pro,MSI,PRO B760M-A WiFi,LGA1700,mATX,DDR4,150.0,,MSI PRO B760M-A WiFi LGA1700 DDR4,
+z790_aorus_elite,Gigabyte,Z790 AORUS Elite AX,LGA1700,ATX,DDR5,245.0,,Gigabyte Z790 AORUS Elite AX LGA1700,
+z890_prime_p,ASUS,Prime Z890-P WiFi,LGA1851,ATX,DDR5,225.0,,ASUS Prime Z890-P WiFi LGA1851,

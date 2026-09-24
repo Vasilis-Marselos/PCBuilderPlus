@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pcbuilder.TutorialLibraryController"
+      spacing="10" style="-fx-padding: 16; -fx-font-family: 'Segoe UI';">
+
+    <Label text="Βιβλιοθήκη Εκπαιδευτικών Οδηγών"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="profileLabel"
+           text="Προφίλ: (δεν έχει οριστεί)"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+    <SplitPane prefWidth="800" prefHeight="500">
+        
+        <items>
+            <ListView fx:id="topicsList" prefWidth="220"/>
+
+            
+            <VBox spacing="8" style="-fx-padding: 0 0 0 8;">
+                <Label fx:id="topicTitleLabel"
+                       text="Επίλεξε θέμα"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                <Label fx:id="topicCategoryLabel"
+                       text=""
+                       style="-fx-font-size: 12px; -fx-text-fill: #555555;"/>
+
+                <TextArea fx:id="topicBodyArea"
+                          wrapText="true"
+                          editable="false"
+                          prefRowCount="12"/>
+
+                <VBox spacing="6">
+                    <Label fx:id="videoPlaceholderLabel"
+                           text="Βίντεο: δεν έχει επιλεγεί θέμα."
+                           wrapText="true"
+                           style="-fx-font-style: italic; -fx-text-fill: #666666;"/>
+
+                    <Button fx:id="openVideoButton"
+                            text="Άνοιγμα προτεινόμενου βίντεο"
+                            onAction="#onOpenVideo"
+                            disable="true"/>
+                </VBox>
+            </VBox>
+        </items>
+    </SplitPane>
+
+</VBox>
