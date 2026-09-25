@@ -1,5 +1,7 @@
 # PCBuilder+
 
+[![Build and test](https://github.com/Vasilis-Marselos/PCBuilderPlus/actions/workflows/build.yml/badge.svg)](https://github.com/Vasilis-Marselos/PCBuilderPlus/actions/workflows/build.yml)
+
 **A JavaFX desktop assistant for choosing PC components, checking compatibility and comparing builds.**
 
 Developed by **Vasileios Marselos** as a BSc (Hons) Computer Science thesis project at Metropolitan College / University of East London (2026). It brings together my interests in software development and PC hardware.
@@ -64,9 +66,11 @@ mvn clean verify
 
 The automated tests added for the public release cover compatible and incompatible component combinations, physical-clearance boundaries, PSU capacity boundaries, empty builds, power estimation and loading all eight catalogues. They do not contact external marketplaces.
 
-**Verification status:** the local publishing environment currently blocks Java dependency path resolution with a Windows access error. A complete build and test pass has not yet been verified; the included tests should not be interpreted as a passing-build claim.
+**Verified:** clean Maven builds and all ten offline regression tests passed on both Windows and Linux with Java 21. The additional JavaFX smoke test passed on Linux, loading four local views under a virtual display. [View the verified build](https://github.com/Vasilis-Marselos/PCBuilderPlus/actions/runs/36052794385).
 
 The original thesis separately documents ten manual test scenarios. Those thesis scenarios and this repository's automated tests are distinct. See [validation and publication notes](docs/VALIDATION.md) for the checks performed on this publication copy.
+
+GitHub Actions runs the regression suite on Windows and Linux with Java 21. On Linux it additionally loads four local JavaFX views under a virtual display. To run that desktop smoke test locally, use `mvn -Dpcbuilder.uiTests=true test` on a graphical desktop.
 
 ## Limitations
 

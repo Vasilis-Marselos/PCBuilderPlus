@@ -28,8 +28,14 @@ It initialises JavaFX and loads the main, assembly guide, optimisation and tutor
 
 ## Current verification status
 
-The Maven dependencies resolved, but the local restricted Windows publishing environment raises `AccessDeniedException` during Java's dependency path resolution. Consequently a successful full compilation and test run has **not yet been verified** for this publication copy. The tests above describe the included suite, not a claim that it has passed.
+The public source was verified by [GitHub Actions run 36052794385](https://github.com/Vasilis-Marselos/PCBuilderPlus/actions/runs/36052794385) at source commit `debc0ff5f9c65f32087b943db8ac1b85a3db0b7a`:
 
-FXML/XML files were parsed successfully as XML. The README screenshot was visually checked. Live marketplace retrieval, native Chromium operation and complete interactive workflows remain unverified in the publication environment.
+- **Windows / Java 21:** `mvn clean verify` passed, including compilation, packaging and all ten offline regression tests.
+- **Linux / Java 21:** the same clean build and ten offline tests passed.
+- **Linux / virtual display:** the additional JavaFX smoke test passed, loading all four local views. All eleven tests passed in this run.
+
+The desktop smoke test is opt-in and is skipped during the normal offline suite. It is not a complete interactive end-to-end test.
+
+FXML/XML files were also parsed successfully as XML, and the README screenshot was visually checked. Live marketplace retrieval, native Chromium operation and complete interactive workflows remain unverified in the publication environment.
 
 The thesis's ten original manual scenarios are separate from the automated regression suite added here.
